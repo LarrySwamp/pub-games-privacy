@@ -1,110 +1,283 @@
-<main>
-  <h1>Pub Games Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2 August 2026</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pub Games — Privacy Policy</title>
 
-  <p>
-    Pub Games is a local party-game app. We respect your privacy and do not
-    operate accounts, advertising, analytics, tracking, or a Pub Games cloud
-    server.
-  </p>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #241d2d;
+      --muted: #665d6d;
+      --cream: #fffaf0;
+      --paper: #ffffff;
+      --orange: #ef5a25;
+      --purple: #6737bd;
+      --line: #eadfce;
+      --shadow: 0 18px 50px rgba(48, 31, 63, 0.12);
+    }
 
-  <h2>Information processed by the app</h2>
+    * {
+      box-sizing: border-box;
+    }
 
-  <ul>
-    <li>
-      <strong>Player names:</strong> Names entered for multiplayer games are
-      stored locally on your device and shared with participating nearby
-      devices during the game.
-    </li>
-    <li>
-      <strong>Game content:</strong> Custom questions, decks, preferences, and
-      scores are stored locally on your device. They are not uploaded to us.
-    </li>
-    <li>
-      <strong>Photos:</strong> Photo Shuffle can request access to your photo
-      library. Photos are selected and processed on your device. If you tap
-      “Share Photos &amp; Ready,” selected photos are sent directly to the
-      nearby devices participating in that game. They are not uploaded to a
-      Pub Games server.
-    </li>
-    <li>
-      <strong>Motion data:</strong> The currently hidden Who Am I game may use
-      device motion only to detect tilt controls. Motion data is processed on
-      the device and is not collected or transmitted to us.
-    </li>
-  </ul>
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, #ffe1b8 0, transparent 32rem),
+        linear-gradient(135deg, #f7efe5, #eee8f8);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
 
-  <h2>Multiplayer connections</h2>
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
 
-  <p>
-    Multiplayer uses Apple’s Network framework to discover and connect to
-    nearby devices. Pub Games does not use Multipeer Connectivity, remote
-    matchmaking, cloud gameplay servers, or a Pub Games backend.
-  </p>
+    .hero {
+      margin-bottom: 24px;
+      padding: 34px;
+      color: white;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--purple), #9b61d6);
+      box-shadow: var(--shadow);
+    }
 
-  <p>
-    During a multiplayer session, temporary gameplay information such as
-    display names, player identifiers, answers, scores, game state, and
-    optional Photo Shuffle submissions may be transmitted directly between
-    participating devices.
-  </p>
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #f9d7ff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-  <p>
-    The app’s multiplayer transport does not provide app-level TLS or
-    end-to-end encryption. Only join tables with people you trust.
-  </p>
+    h1,
+    h2 {
+      line-height: 1.15;
+    }
 
-  <h2>Information we do not collect</h2>
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: -0.04em;
+    }
 
-  <p>We do not collect, sell, or share personal information for advertising or tracking. The app does not collect:</p>
+    .hero p {
+      max-width: 680px;
+      margin: 0;
+      color: #f8efff;
+      font-size: 1.08rem;
+    }
 
-  <ul>
-    <li>Accounts, email addresses, or contact information</li>
-    <li>Location data or contacts</li>
-    <li>Advertising identifiers</li>
-    <li>Analytics or browsing history</li>
-    <li>Photos uploaded to a server</li>
-  </ul>
+    .policy {
+      padding: clamp(24px, 5vw, 48px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
 
-  <h2>Storage and retention</h2>
+    .updated {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
 
-  <p>
-    Player names, custom content, and preferences remain on your device unless
-    you remove them or delete the app. Active multiplayer data and Photo
-    Shuffle images are kept temporarily for the current game and are cleared
-    when the session ends or you leave the game. Other players may still
-    independently save or capture content displayed on their own devices.
-  </p>
+    h2 {
+      margin: 36px 0 12px;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+    }
 
-  <h2>Third-party services</h2>
+    p {
+      margin: 0 0 16px;
+    }
 
-  <p>
-    Pub Games does not use third-party advertising, analytics, tracking,
-    cloud-storage, or matchmaking services. The app uses Apple system
-    frameworks, including Network, Photos, and Core Motion, only to provide
-    the features described above.
-  </p>
+    ul {
+      margin: 0 0 18px;
+      padding-left: 1.35rem;
+    }
 
-  <h2>Children’s privacy</h2>
+    li {
+      margin: 8px 0;
+    }
 
-  <p>
-    Pub Games does not knowingly collect personal information from children or
-    anyone else.
-  </p>
+    strong {
+      color: var(--ink);
+    }
 
-  <h2>Changes to this policy</h2>
+    .notice {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 5px solid var(--orange);
+      border-radius: 14px;
+      background: #fff1df;
+    }
 
-  <p>
-    We may update this policy when the app’s features or data practices change.
-    The latest version will always be published on this page.
-  </p>
+    a {
+      color: var(--purple);
+      font-weight: 700;
+    }
 
-  <h2>Contact</h2>
+    footer {
+      padding: 24px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
 
-  <p>
-    For privacy questions, contact:
-    <a href="mailto:Yrayon-atavism.4b@icloud.com">
-      rayon-atavism.4b@icloud.com
-    </a>
-  </p>
-</main>
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 920px);
+        padding: 20px 0;
+      }
+
+      .hero,
+      .policy {
+        border-radius: 20px;
+      }
+
+      .hero {
+        padding: 26px 22px;
+      }
+
+      .policy {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Pub Games</p>
+      <h1>Privacy Policy</h1>
+      <p>
+        Pub Games is a local party-game app. We do not operate user accounts,
+        advertising, analytics, tracking, or a Pub Games cloud server.
+      </p>
+    </header>
+
+    <article class="policy">
+      <p class="updated"><strong>Last updated:</strong> 2 August 2026</p>
+
+      <h2>Information processed by the app</h2>
+
+      <ul>
+        <li>
+          <strong>Player names:</strong> Names entered for multiplayer games
+          are stored locally on your device and shared with participating
+          nearby devices during the game.
+        </li>
+
+        <li>
+          <strong>Game content:</strong> Custom questions, decks, preferences,
+          and scores are stored locally on your device. They are not uploaded
+          to us.
+        </li>
+
+        <li>
+          <strong>Photos:</strong> Photo Shuffle can request access to your
+          photo library. Photos are selected and processed on your device.
+          When you tap “Share Photos &amp; Ready,” selected photos are sent
+          directly to the nearby devices participating in that game. They are
+          not uploaded to a Pub Games server.
+        </li>
+
+        <li>
+          <strong>Motion data:</strong> The currently hidden Who Am I game may
+          use device motion only to detect tilt controls. Motion data is
+          processed on the device and is not collected or transmitted to us.
+        </li>
+      </ul>
+
+      <h2>Multiplayer connections</h2>
+
+      <p>
+        Multiplayer uses Apple’s Network framework to discover and connect to
+        nearby devices. Pub Games does not use Multipeer Connectivity, remote
+        matchmaking, cloud gameplay servers, or a Pub Games backend.
+      </p>
+
+      <p>
+        During a multiplayer session, temporary gameplay information such as
+        display names, player identifiers, answers, scores, game state, and
+        optional Photo Shuffle submissions may be transmitted directly between
+        participating devices.
+      </p>
+
+      <div class="notice">
+        The app’s multiplayer transport does not provide app-level TLS or
+        end-to-end encryption. Only join tables with people you trust.
+      </div>
+
+      <h2>Information we do not collect</h2>
+
+      <p>
+        We do not collect, sell, or share personal information for advertising
+        or tracking. The app does not collect:
+      </p>
+
+      <ul>
+        <li>Accounts, email addresses, or contact information</li>
+        <li>Location data or contacts</li>
+        <li>Advertising identifiers</li>
+        <li>Analytics or browsing history</li>
+        <li>Photos uploaded to a server</li>
+      </ul>
+
+      <h2>Storage and retention</h2>
+
+      <p>
+        Player names, custom content, and preferences remain on your device
+        unless you remove them or delete the app. Active multiplayer data and
+        Photo Shuffle images are kept temporarily for the current game and are
+        cleared when the session ends or you leave the game. Other players may
+        independently save or capture content displayed on their own devices.
+      </p>
+
+      <h2>Third-party services</h2>
+
+      <p>
+        Pub Games does not use third-party advertising, analytics, tracking,
+        cloud-storage, or matchmaking services. The app uses Apple system
+        frameworks, including Network, Photos, and Core Motion, only to provide
+        the features described above.
+      </p>
+
+      <h2>Children’s privacy</h2>
+
+      <p>
+        Pub Games does not knowingly collect personal information from
+        children or anyone else.
+      </p>
+
+      <h2>Changes to this policy</h2>
+
+      <p>
+        We may update this policy when the app’s features or data practices
+        change. The latest version will always be published on this page.
+      </p>
+
+      <h2>Contact</h2>
+
+      <p>
+        For privacy questions, contact
+        <a href="mailto:rayon-atavism.4b@icloud.com">
+          rayon-atavism.4b@icloud.com
+        </a>.
+      </p>
+    </article>
+
+    <footer>
+      © 2026 Pub Games
+    </footer>
+  </main>
+</body>
+</html>
